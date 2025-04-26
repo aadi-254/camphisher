@@ -36,21 +36,6 @@ if ! command -v php &> /dev/null; then
     fi
 fi
 
-# Clone the repository (you should replace this with your own repository)
-REPO_URL="https://github.com/yourusername/yourrepository.git"
-TARGET_DIR="myproject"
-
-# Check if the repository exists locally, if not, clone it
-if [ ! -d "$TARGET_DIR" ]; then
-    echo "📥 Cloning your repository..."
-    git clone "$REPO_URL" "$TARGET_DIR"
-else
-    echo "Repository already exists. Skipping cloning."
-fi
-
-# Change directory to the project
-cd "$TARGET_DIR" || exit
-
 # Ensure the 'uploads' directory exists for image saving
 mkdir -p uploads
 
